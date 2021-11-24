@@ -1,0 +1,86 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Line2DLoop.gd" type="Script" id=1]
+[ext_resource path="res://Intersection.gd" type="Script" id=2]
+[ext_resource path="res://Segment.gd" type="Script" id=3]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0.730529, 0.779297, 0.0449163, 1, 0.712956, 0.105283, 0.849609, 1 )
+
+[sub_resource type="ArrayMesh" id=5]
+surfaces/0 = {
+"aabb": AABB( 90, 90, 0, 220, 520, 0 ),
+"array_data": PoolByteArray( 0, 0, 180, 66, 0, 0, 180, 66, 0, 0, 255, 255, 77, 56, 0, 0, 0, 0, 220, 66, 0, 0, 220, 66, 0, 0, 255, 255, 77, 56, 0, 60, 0, 0, 155, 67, 0, 0, 180, 66, 0, 0, 255, 255, 5, 58, 0, 0, 0, 0, 145, 67, 0, 0, 220, 66, 0, 0, 255, 255, 5, 58, 0, 60, 0, 0, 155, 67, 0, 0, 180, 66, 0, 0, 255, 255, 5, 58, 0, 0, 0, 0, 145, 67, 0, 0, 220, 66, 0, 0, 255, 255, 5, 58, 0, 60, 0, 0, 155, 67, 0, 128, 24, 68, 0, 0, 255, 255, 41, 61, 0, 0, 0, 0, 145, 67, 0, 128, 19, 68, 0, 0, 255, 255, 41, 61, 0, 60, 0, 0, 155, 67, 0, 128, 24, 68, 0, 0, 255, 255, 41, 61, 0, 0, 0, 0, 145, 67, 0, 128, 19, 68, 0, 0, 255, 255, 41, 61, 0, 60, 0, 0, 180, 66, 0, 128, 24, 68, 0, 0, 255, 255, 5, 62, 0, 0, 0, 0, 220, 66, 0, 128, 19, 68, 0, 0, 255, 255, 5, 62, 0, 60, 0, 0, 180, 66, 0, 128, 24, 68, 0, 0, 255, 255, 5, 62, 0, 0, 0, 0, 220, 66, 0, 128, 19, 68, 0, 0, 255, 255, 5, 62, 0, 60, 0, 0, 180, 66, 0, 0, 180, 66, 0, 0, 255, 255, 22, 64, 0, 0, 0, 0, 220, 66, 0, 0, 220, 66, 0, 0, 255, 255, 22, 64, 0, 60, 0, 0, 180, 66, 0, 0, 180, 66, 0, 0, 255, 255, 22, 64, 0, 0, 0, 0, 220, 66, 0, 0, 220, 66, 0, 0, 255, 255, 22, 64, 0, 60 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 2, 0, 5, 0, 3, 0, 2, 0, 4, 0, 5, 0, 4, 0, 7, 0, 5, 0, 4, 0, 6, 0, 7, 0, 6, 0, 9, 0, 7, 0, 6, 0, 8, 0, 9, 0, 8, 0, 11, 0, 9, 0, 8, 0, 10, 0, 11, 0, 10, 0, 13, 0, 11, 0, 10, 0, 12, 0, 13, 0, 12, 0, 15, 0, 13, 0, 12, 0, 14, 0, 15, 0, 14, 0, 17, 0, 15, 0, 14, 0, 16, 0, 17, 0 ),
+"blend_shape_data": [  ],
+"format": 2456857,
+"index_count": 54,
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 18
+}
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 3 )
+p1 = Vector2( 100, 20 )
+p2 = Vector2( 100, 300 )
+thickness = 30.0
+debug_name = "A"
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 3 )
+p1 = Vector2( 150, 600 )
+p2 = Vector2( 100, 300 )
+thickness = 50.0
+debug_name = "B"
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 3 )
+p1 = Vector2( 0, 400 )
+p2 = Vector2( 100, 300 )
+thickness = 10.0
+debug_name = ""
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 3 )
+p1 = Vector2( 300, 250 )
+p2 = Vector2( 100, 300 )
+thickness = 10.0
+debug_name = ""
+
+[node name="Main" type="Node"]
+
+[node name="BuiltIn" type="Node2D" parent="."]
+visible = false
+
+[node name="Base" type="Line2D" parent="BuiltIn"]
+position = Vector2( -38.8474, -88.0013 )
+points = PoolVector2Array( 104.697, 247.552, 127.146, 151.768, 261.093, 140.543, 322.454, 240.068, 201.228, 343.335 )
+default_color = Color( 0.4, 0.501961, 1, 1 )
+
+[node name="Line2D+Params" type="Line2D" parent="BuiltIn"]
+position = Vector2( 224.76, -94.7402 )
+points = PoolVector2Array( 104.697, 247.552, 127.146, 151.768, 261.093, 140.543, 322.454, 240.068, 201.228, 343.335 )
+width = 20.0
+default_color = Color( 1, 0.4, 0.976471, 1 )
+gradient = SubResource( 1 )
+joint_mode = 2
+begin_cap_mode = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="BuiltIn"]
+color = Color( 0.4, 0.501961, 1, 1 )
+polygon = PoolVector2Array( 74.2836, 325.388, 41.7567, 397.513, 99.2681, 474.823, 135.578, 406.566, 187.903, 425.593, 177.993, 482.279, 271.331, 462.567, 201.777, 357.808, 258.603, 319.26, 183.178, 291.918 )
+
+[node name="Mine" type="Node2D" parent="."]
+
+[node name="Line2DLoop" type="MeshInstance2D" parent="Mine"]
+position = Vector2( 630.288, -38.4565 )
+mesh = SubResource( 5 )
+script = ExtResource( 1 )
+LinePointList = [ Vector2( 100, 100 ), Vector2( 300, 100 ), Vector2( 300, 600 ), Vector2( 100, 600 ) ]
+LineWidth = 20.0
+Loop = true
+
+[node name="Intersection" type="Node" parent="Mine"]
+script = ExtResource( 2 )
+Segments = [ SubResource( 3 ), SubResource( 4 ), SubResource( 6 ), SubResource( 7 ) ]

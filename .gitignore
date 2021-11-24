@@ -1,0 +1,10 @@
+.import
+*tmp*
+/logs.txt
+/data/private
+*.png~
+*~
+*.exe
+*.apk
+*.x86_64
+*-autosave*
